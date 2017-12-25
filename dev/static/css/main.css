@@ -1169,9 +1169,9 @@ a.article__pic:hover .icon-play {
 .icon-drugBox {
   position: absolute;
   top: 30px;
-  left: 30px;
-  width: 40px;
-  height: 60px;
+  left: 20px;
+  height: 70px;
+  fill: #C1C2C4;
 }
 
 .icon-right {
@@ -1192,8 +1192,8 @@ a.article__pic:hover .icon-play {
   position: fixed;
   top: 40px;
   right: 40px;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   margin: 50px auto;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -1220,24 +1220,23 @@ a.article__pic:hover .icon-play {
 }
 
 .btn-close:before {
-  top: 0;
+  top: -1px;
   border-top: 4px solid #fff;
   border-bottom: 2px solid #fff;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   border-bottom: none;
-  left: -10px;
+  left: -5px;
 }
 
 .btn-close:after {
-  bottom: 0;
   border-bottom: 4px solid #fff;
   border-top: 2px solid #fff;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   border-top: none;
-  bottom: 6px;
-  left: 10px;
+  bottom: 4px;
+  left: 7px;
 }
 
 .btn-close:hover {

@@ -329,9 +329,9 @@ a.article__pic
 .icon-drugBox
 	position: absolute
 	top: 30px
-	left: 30px
-	width: 40px
-	height: 60px
+	left: 20px
+	height: 70px
+	fill: #C1C2C4
 
 .icon-right
 	display: inline-block
@@ -349,8 +349,8 @@ a.article__pic
 	position: fixed
 	top: 40px
 	right: 40px
-	width: 60px
-	height: 60px
+	width: 40px
+	height: 40px
 	margin: 50px auto
 	transform: rotate(0deg)
 	transition: .5s ease-in-out
@@ -371,20 +371,19 @@ a.article__pic
 		height: 50%
 		transform-origin: 0 100%
 	&:before
-		top: 0
+		top: -1px
 		border-top: 4px solid #fff
 		border-bottom: 2px solid #fff
 		+rotate(45)
 		border-bottom: none
-		left: -10px
+		left: -5px
 	&:after
-		bottom: 0
 		border-bottom: 4px solid #fff
 		border-top: 2px solid #fff
 		+rotate(-45)
 		border-top: none
-		bottom: 6px
-		left: 10px
+		bottom: 4px
+		left: 7px
 
 	&:hover
 		+scale(.7)
