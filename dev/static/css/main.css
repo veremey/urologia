@@ -915,6 +915,9 @@ p {
 
 a.wood__item {
   display: block;
+  color: #333333;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 a.wood__item:hover {
@@ -940,6 +943,7 @@ a.wood__item:hover .wood__desc {
 }
 
 a.article__item {
+  color: #333333;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -959,6 +963,7 @@ a.article__item:hover .article__desc {
 
 a.article__pic {
   display: block;
+  color: #333333;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
