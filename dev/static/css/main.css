@@ -973,8 +973,6 @@ a.article__pic:hover {
 }
 
 a.article__pic:hover .icon-play {
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
   -webkit-transform: scale(1.2) translate(-50%, -50%);
           transform: scale(1.2) translate(-50%, -50%);
 }
@@ -1258,6 +1256,8 @@ a.article__pic:hover .icon-play {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
   z-index: 2;
   -webkit-transition: 0.4s;
   transition: 0.4s;
