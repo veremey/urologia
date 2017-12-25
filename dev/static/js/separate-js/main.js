@@ -16,5 +16,7 @@ $(document).ready(function(){
 		$('.page-docs').show();
 		$('.document').hide();
 		$('.' + $open).show();
+
+		return false;
 	});
 });

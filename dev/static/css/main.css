@@ -737,6 +737,7 @@ p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-size: 0;
+  margin-bottom: 40px;
 }
 
 .wood__header {
@@ -765,6 +766,7 @@ p {
 }
 
 .wood__text {
+  display: block;
   padding: 20px 30px;
 }
 
@@ -781,6 +783,7 @@ p {
 }
 
 .wood__pic {
+  display: block;
   position: relative;
   height: 170px;
   overflow: hidden;
@@ -797,6 +800,7 @@ p {
 }
 
 .wood__item {
+  display: block;
   background-color: #FFF;
   margin-bottom: 20px;
   border: 1px solid #F2F2F2;
@@ -907,6 +911,23 @@ p {
 
 .wood_bg {
   background-image: url("../img/");
+}
+
+a.wood__item {
+  display: block;
+}
+
+a.wood__item:hover {
+  opacity: .8;
+}
+
+a.wood__item:hover .wood__pic {
+  -webkit-filter: hue-rotate(260deg);
+          filter: hue-rotate(260deg);
+}
+
+a.wood__item:hover .wood__desc {
+  color: #182F55;
 }
 
 .desc-small {
