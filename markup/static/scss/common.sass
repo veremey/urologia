@@ -1,0 +1,63 @@
+// Common styles of the project
+
+
+html
+	+selection
+		background: rgba(0, 0, 0, .2)
+		color: #fff
+
+html, body
+	height: 100%
+
+body
+	color: $text
+	background-color: $body
+	-webkit-font-smoothing: antialiased!important
+	+lr
+
+.page
+	&.is-hidden
+		overflow: hidden
+
+.page__wrapper
+	max-width: 1050px
+	width: 98%
+	margin: 0 auto
+
+* html .page__wrapper
+	height: 100%
+
+*
+	box-sizing: border-box
+	&:before,
+	&:after
+		box-sizing: inherit
+
+a
+	text-decoration: none
+	outline: none
+
+h1, h2, h3, h4, h5, h6
+	margin: 0 0 .8em
+	font-weight: normal
+	line-height: 1.1
+
+h1
+	font-size: 2em
+h2
+	font-size: 1.8em
+h3
+	font-size: 1.6em
+h4
+	font-size: 1.5em
+h5
+	font-size: 1.4em
+h6
+	font-size: 1.3em
+
+b, strong
+	font-weight: normal
+
+p
+	margin: 0
+

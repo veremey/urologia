@@ -1,0 +1,33 @@
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $n;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	width: 100%;
+	max-width: 260px;
+	height: 60px;
+	border-radius: 4px;
+	transition: all .4s;
+
+	&_line {
+		border: 1px solid $darkBlue;
+		color: $darkBlue;
+		text-transform: uppercase;
+		font-size: 12px;
+		font-family: 'lato-medium-webfont', Arial, sans-serif;
+		font-weight: normal;
+		letter-spacing: 0.1em;
+		&:hover {
+			color: #fff;
+			background-color: $darkBlue;
+		}
+	}
+
+	&.mt-30 {
+		margin-top: 30px;
+	}
+}
