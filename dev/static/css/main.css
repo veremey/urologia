@@ -1174,6 +1174,12 @@ a.article__pic:hover .icon-play {
   fill: #C1C2C4;
 }
 
+@media only screen and (max-width: 600px) {
+  .icon-drugBox {
+    height: 54px;
+  }
+}
+
 .icon-right {
   display: inline-block;
   vertical-align: top;
@@ -1207,6 +1213,8 @@ a.article__pic:hover .icon-play {
   margin: 0;
   border: none;
   outline: none;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 .btn-close:before, .btn-close:after {
@@ -1240,8 +1248,8 @@ a.article__pic:hover .icon-play {
 }
 
 .btn-close:hover {
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
 }
 
 .icon-play {
