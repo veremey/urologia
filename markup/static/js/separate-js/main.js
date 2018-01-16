@@ -97,11 +97,24 @@ document.getElementById('next').addEventListener('click', onNextPage);
 'use strict';
 
 $(document).ready(function(){
+
+  function isiPhone(){
+      return (
+          (navigator.platform.indexOf("iPhone") != -1) ||
+          (navigator.platform.indexOf("iPod") != -1)
+      );
+  }
+  if(isiPhone()){
+     alert('iPhone detected');
+  }
+
 	$('.btn-close').click(function(){
 		$('.page').removeClass('is-hidden');
 
-		$('.page-docs').hide();
+		$('.page-docs, .page-video').hide();
 		$('.document').hide();
+    $('#video-start').get(0).currentTime = 0
+    $('#video-start').get(0).pause();
 	});
 
 	$('[data-pdf]').on('click', function () {

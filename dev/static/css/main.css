@@ -505,7 +505,7 @@ body {
 }
 
 .page.is-hidden {
-  overflow: hidden;
+  position: fixed;
 }
 
 .page__container {
@@ -634,8 +634,8 @@ canvas {
   display: flex;
 }
 
-.page-video img {
-  width: 100%;
+.page-video video {
+  max-width: 100%;
   height: auto;
 }
 
