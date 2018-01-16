@@ -33,8 +33,8 @@ module.exports = {
             "inline": false
         },
         "css": {
-            "active": true,
-            "inline": true
+            "active": false,
+            "inline": false
         }
     },
     "notifyConfig": {

@@ -12,6 +12,8 @@
         <meta content="telephone=no" name="format-detection">
         <!-- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers -->
         <meta name="HandheldFriendly" content="true">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+        
         
         
         <!--[if (gt IE 9)|!(IE)]><!--><link href="static/css/main.css" rel="stylesheet" type="text/css"><!--<![endif]-->
@@ -306,7 +308,22 @@
             		</div>
             	</article>
             	<!-- doc-ipsos -->
-            	<a href="#" class="wood__item wood__2-3" data-pdf="doc-ipsos">
+            
+            	<a  class="wood__item wood__2-3 like_link"  data-fancybox data-type="iframe" data-src="Ipsos Comcon Tavanic.pdf" href="javascript:;">
+            	  <span class="wood__pic">
+            	    <img src="static/img/content/img-01.jpg" alt="wood pic" class="wood__img">
+            	  </span>
+            	  <span class="wood__text">
+            	    <h4 class="wood__title">Таваник </h4>
+            	    <span class="wood__wrap">
+            	      <p class="wood__desc mod-1">Антибиотик №1 в назначениях урологов для лечения хронического бактериального простатита</p>
+            	      <span class="arrow_link">
+            	        <img src="static/img/content/icon-right.png" alt="icon-right" class="icon-right">
+            	      </span>
+            	    </span>
+            	  </span>
+            	</a>
+            	<!-- <a href="#" class="wood__item wood__2-3" data-pdf="doc-ipsos">
             		<span class="wood__pic">
             			<img src="static/img/content/img-01.jpg" alt="wood pic" class="wood__img">
             		</span>
@@ -319,7 +336,7 @@
             				</span>
             			</span>
             		</span>
-            	</a>
+            	</a> -->
             	<!-- doc-yrokonf_2018.pdf -->
             	<a href="#" class="wood__item wood__1-3"  data-pdf="doc-yrokonf">
             		<span class="wood__pic">
@@ -413,8 +430,8 @@
             					<h6 class="article__title">Бактериальный простатит</h6>
             					<p class="article__desc article__desc_small">Просто факты. Просто мифы</p>
             				</div>
-            				<button class="btn btn_line" data-pdf="doc-mif">СКАЧАТЬ</button>
             			</div>
+            			<button class="btn btn_line" data-pdf="mifs.pdf">СКАЧАТЬ</button>
             		</div>
             		<!-- doc-dnevnik -->
             		<div class="article__item article_1-3">
@@ -426,8 +443,8 @@
             					<p class="article__tag">Брошюра</p>
             					<h6 class="article__title">Дневник IPSS</h6>
             				</div>
-            				<button class="btn btn_line" data-pdf="doc-dnevnik">СКАЧАТЬ</button>
             			</div>
+            			<button class="btn btn_line" data-pdf="dnevnik.pdf">СКАЧАТЬ</button>
             		</div>
             		<!-- doc-ypraznenia -->
             		<div class="article__item article_1-3">
@@ -439,8 +456,8 @@
             					<p class="article__tag">Брошюра</p>
             					<h6 class="article__title">Упражнения для укрепления тазового дна</h6>
             				</div>
-            				<button class="btn btn_line" data-pdf="doc-ypraznenia">СКАЧАТЬ</button>
             			</div>
+            			<button class="btn btn_line" data-pdf="doc-ypraznenia">СКАЧАТЬ</button>
             		</div>
             		<!-- doc-pravila -->
             		<div class="article__item article_1-3">
@@ -451,11 +468,11 @@
             				<div class="article__text  mod-p">
             					<p class="article__tag">Брошюра</p>
             				</div>
-            				<button class="btn btn_line" data-pdf="doc-pravila">СКАЧАТЬ</button>
             			</div>
+            			<button class="btn btn_line" data-pdf="doc-pravila">СКАЧАТЬ</button>
             		</div>
             		<!-- video -->
-            		<div class="article__item article_1-3">
+            		<div class="article__item article_1-3  has-video">
             			<a href="#" class="article__pic">
             				<img src="static/img/content/img-10.jpg" alt="article pic" class="article__img">
             				<i class="icon-play"></i>
@@ -521,9 +538,21 @@
             <div class="page-docs" >
             	<button class="btn-close"></button>
             
-            	<div class="document doc-mif">
-            		<embed class="document__item" src="mifs.pdf" width="800" height="375" type='application/pdf'>
+            		<div class="pdf-wrap">
+            			<div class="pdf-btns">
+            			  <button id="prev">Previous</button>
+            			  <button id="next">Next</button>
+            			  &nbsp; &nbsp;
+            			  <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+            			</div>
+            
+            		<div class="canvas__wrap">
+            			<canvas id="the-canvas"></canvas>
+            		</div>
             	</div>
+            	<!-- 	<div class="document doc-mif">
+            		<embed class="document__item" src="mifs.pdf" width="800" height="375" type='application/pdf'>
+            	</div> -->
             
             	<div class="document doc-ipsos">
             		<embed class="document__item" src="Ipsos Comcon Tavanic.pdf" width="800" height="375" type='application/pdf'>
@@ -554,11 +583,23 @@
             	</div>
             
             </div>
+            
+            <div class="page-video">
+            	<!-- <img src="tavanik-bioplenki.mp4" alt=""> -->
+            	<video  id="video-start" preload="auto" >
+            		<source src="tavanik-bioplenki.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+            	</video>
+            </div>
 
         </div>
 
         <script src="static/js/separate-js/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+        <script type="text/javascript" src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+
         <script src="static/js/separate-js/main.js"></script>
+
 
     </body>
 
