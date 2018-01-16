@@ -98,15 +98,15 @@ document.getElementById('next').addEventListener('click', onNextPage);
 
 $(document).ready(function(){
 
-  function isiPhone(){
-      return (
-          (navigator.platform.indexOf("iPhone") != -1) ||
-          (navigator.platform.indexOf("iPod") != -1)
-      );
-  }
-  if(isiPhone()){
-     alert('iPhone detected');
-  }
+  // function isiPhone(){
+  //     return (
+  //         (navigator.platform.indexOf("iPhone") != -1) ||
+  //         (navigator.platform.indexOf("iPod") != -1)
+  //     );
+  // }
+  // if(isiPhone()){
+  //    alert('iPhone detected');
+  // }
 
 	$('.btn-close').click(function(){
 		$('.page').removeClass('is-hidden');
